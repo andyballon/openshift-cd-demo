@@ -153,7 +153,7 @@ function deploy() {
   sleep 5
 
   oc tag jenkins:v3.7 jenkins:latest -n openshift
-  oc new-app jenkins-ephemeral -n cicd-$PRJ_SUFFIX
+  oc new-app jenkins-persistent -n cicd-$PRJ_SUFFIX
 
   sleep 2
 
